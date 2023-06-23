@@ -342,12 +342,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-<<<<<<< HEAD
-  padding: 120px 0;
-  z-index: -1;
-=======
   padding: 135px 0;
->>>>>>> test-branch
   position: relative;
   background-color: black;
 }
