@@ -81,6 +81,15 @@ p.success {
 p.danger {
 	color: red;
 }
+
+a.resume-link {
+  text-decoration: none;
+  color: black;
+}
+
+a.resume-link:hover {
+  color: gray
+}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -616,3 +625,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
