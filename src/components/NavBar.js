@@ -6,10 +6,12 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import { useNavigate } from 'react-router-dom'
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home')
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const onScroll = () => {
@@ -50,7 +52,7 @@ export const NavBar = () => {
                 <a href='https://github.com/carlosm22700' target='_blank'><img src={navIcon2} alt=''/></a>
                 {/* <a href='#'><img src={navIcon3} alt=''/></a> */}
             </div>
-            <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+            <button className='vvd' onClick={() => navigate("/contact")}><span>Let's Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>
