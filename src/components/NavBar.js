@@ -42,13 +42,13 @@ export const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-            <Nav.Link href='#projects' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link href='#project' className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-                <a href='#'><img src={navIcon1} alt=''/></a>
-                <a href='#'><img src={navIcon2} alt=''/></a>
-                <a href='#'><img src={navIcon3} alt=''/></a>
+                <a href='https://www.linkedin.com/in/carlossmartinez/' target='_blank'><img src={navIcon1} alt=''/></a>
+                <a href='https://github.com/carlosm22700' target='_blank'><img src={navIcon2} alt=''/></a>
+                {/* <a href='#'><img src={navIcon3} alt=''/></a> */}
             </div>
             <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>
