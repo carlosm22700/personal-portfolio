@@ -157,9 +157,11 @@ export const Projects = () => {
 
   const [currentTitle, setCurrentTitle] = useState(projects[0].title);
   const [currentDescription, setCurrentDescription] = useState("A simple and fun blackjack game built with HTML, CSS, and JavaScript. The game allows users to test their luck by increase/decrease their bet and playing multiple rounds of blackjack against a dealer.");
+  const [currentLiveUrl, setCurrentLiveUrl] = useState(projects[0].liveUrl);
 
   const handleSelect = (selectedIndex) => {
     setCurrentTitle(projects[selectedIndex].title);
+    setCurrentLiveUrl(projects[selectedIndex].liveUrl);
     switch (selectedIndex) {
       case '0':
         setCurrentDescription("A simple and fun blackjack game built with HTML, CSS, and JavaScript. The game allows users to test their luck by increase/decrease their bet and playing multiple rounds of blackjack against a dealer.");
@@ -187,7 +189,7 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div>
-                  <h2>{currentTitle}</h2>
+                  <a href={currentLiveUrl} target="_blank" rel="noreferrer"><h2>{currentTitle}</h2></a>
                   <p>{currentDescription}</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="0" onSelect={handleSelect}>
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
