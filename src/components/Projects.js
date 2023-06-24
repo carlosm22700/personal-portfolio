@@ -28,6 +28,7 @@ import proj4Img6 from "../assets/img/Fittrax/proj4Img6.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { useState } from "react";
 
 export const Projects = () => {
 
@@ -154,6 +155,30 @@ export const Projects = () => {
     }
   ];
 
+  const [currentTitle, setCurrentTitle] = useState(projects[0].title);
+  const [currentDescription, setCurrentDescription] = useState("A simple and fun blackjack game built with HTML, CSS, and JavaScript. The game allows users to test their luck by increase/decrease their bet and playing multiple rounds of blackjack against a dealer.");
+
+  const handleSelect = (selectedIndex) => {
+    setCurrentTitle(projects[selectedIndex].title);
+    switch (selectedIndex) {
+      case '0':
+        setCurrentDescription("A simple and fun blackjack game built with HTML, CSS, and JavaScript. The game allows users to test their luck by increase/decrease their bet and playing multiple rounds of blackjack against a dealer.");
+        break;
+      case '1':
+        setCurrentDescription("Anidex is an anime progress tracking app that allows you to keep track of and maintain an updated list of your animes. Gone are the dreadful days of forgetting which season and episode you left off at, and no more notepad files and excel spreadsheets! Anidex grants you access to your list from any internet-connected device. Within your list is an overview of the name of an anime and its completion status. Additionally, you are able to view specific details about an anime in your list such as the studio, current episode, current season, and release year. Your list is yours to command! Edit specific details and/or delete animes and notes you no longer wish to keep. Never forget your anime progress again!");
+        break;
+      case '2':
+        setCurrentDescription("NEED is your all-inclusive online marketplace built with the goal of answering to any and every need. Our motto is \"You Need? We Got.\", a testament to our dedication in providing a platform where you can find virtually anything, from little knick-knacks to the most essential doodads. Don't be surprised if you find a Thing-a-majig!");
+        break;
+      case '3':
+        setCurrentDescription("This Fitness Tracker App aims to provide users with a seamless experience for creating and managing their workout routines. After logging in, users will land on a dashboard that displays a weekly schedule with the muscle groups targeted each day. Users can add or edit workout routines for each day, with each routine consisting of specific exercises pulled from the wger API. Users can also log their personal records for each exercise and automatically track improvements over time. Additional features include automatic updating of personal records and restrictions on assigning the same day to multiple routines.");
+        break;
+      default:
+        setCurrentDescription("");
+        break;
+    }
+  };
+
   return (
     <section className="project" id="project">
       <Container>
@@ -161,10 +186,10 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                  <h2>Projects</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="0">
+                <div>
+                  <h2>{currentTitle}</h2>
+                  <p>{currentDescription}</p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="0" onSelect={handleSelect}>
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       {
                         projects.map((project, index) => (
@@ -174,7 +199,7 @@ export const Projects = () => {
                         ))
                       }
                     </Nav>
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Tab.Content id="slideInUp">
                       {
                         projects.map((project, index) => (
                           <Tab.Pane eventKey={index} key={index}>
