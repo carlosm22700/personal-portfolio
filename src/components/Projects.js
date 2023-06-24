@@ -27,7 +27,6 @@ import proj4Img6 from "../assets/img/Fittrax/proj4Img6.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 import { useState } from "react";
 
 export const Projects = () => {
@@ -186,45 +185,41 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div>
-                  <a href={currentLiveUrl} target="_blank" rel="noreferrer"><h2>{currentTitle}</h2></a>
-                  <p>{currentDescription}</p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="0" onSelect={handleSelect}>
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                      {
-                        projects.map((project, index) => (
-                          <Nav.Item key={index}>
-                            <Nav.Link eventKey={index}>{project.title}</Nav.Link>
-                          </Nav.Item>
-                        ))
-                      }
-                    </Nav>
-                    <Tab.Content id="slideInUp">
-                      {
-                        projects.map((project, index) => (
-                          <Tab.Pane eventKey={index} key={index}>
-                            <Row>
-                              {
-                                project.details.map((detail, idx) => (
-                                  <ProjectCard
-                                    key={idx}
-                                    title={project.title}
-                                    description={detail.description}
-                                    imgUrl={detail.imgUrl}
-                                  />
-                                ))
-                              }
-                            </Row>
-                          </Tab.Pane>
-                        ))
-                      }
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>
-              }
-            </TrackVisibility>
+              <div>
+                <a href={currentLiveUrl} target="_blank" rel="noreferrer"><h2>{currentTitle}</h2></a>
+                <p>{currentDescription}</p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="0" onSelect={handleSelect}>
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    {
+                      projects.map((project, index) => (
+                        <Nav.Item key={index}>
+                          <Nav.Link eventKey={index}>{project.title}</Nav.Link>
+                        </Nav.Item>
+                      ))
+                    }
+                  </Nav>
+                  <Tab.Content id="slideInUp">
+                    {
+                      projects.map((project, index) => (
+                        <Tab.Pane eventKey={index} key={index}>
+                          <Row>
+                            {
+                              project.details.map((detail, idx) => (
+                                <ProjectCard
+                                  key={idx}
+                                  title={project.title}
+                                  description={detail.description}
+                                  imgUrl={detail.imgUrl}
+                                />
+                              ))
+                            }
+                          </Row>
+                        </Tab.Pane>
+                      ))
+                    }
+                  </Tab.Content>
+                </Tab.Container>
+              </div>
           </Col>
         </Row>
       </Container>

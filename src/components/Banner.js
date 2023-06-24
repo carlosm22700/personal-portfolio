@@ -2,8 +2,6 @@ import { useState, useEffect} from 'react';
 import { Container, Col, Row } from "react-bootstrap";
 import { ArrowDownCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg'
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -47,17 +45,14 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <TrackVisibility>
-                        {({ isVisible }) => 
-                            <div className={isVisible ? "animate__animated animate__fadein" : ""}>
-                                <span className="tagline">Welcome to my Portfolio</span>
-                                <h1>{`Hi I'm Carlos Martinez`} <span className="wrap">{text}</span></h1>
-                                <p> I'm a detail-oriented software engineer with a passion for front-end development and data analysis. I enjoy creating intuitive, effective digital solutions for complex problems, utilizing languages like JavaScript, React, Python, and various back-end technologies. Always excited for the next challenge, I am continuously improving my skills to stay on the cutting edge of technology. Feel free to browse my projects and get in touch!</p>
-                                <a className='resume-link' href="/resume.pdf" download>
-                                    <button onClick={() => console.log('connect')}>Download Resumé <ArrowDownCircle size={25} /></button>
-                                </a>
-                            </div>}
-                        </TrackVisibility>
+                        <div>
+                            <span className="tagline">Welcome to my Portfolio</span>
+                            <h1>{`Hi I'm Carlos Martinez`} <span className="wrap">{text}</span></h1>
+                            <p> I'm a detail-oriented software engineer with a passion for front-end development and data analysis. I enjoy creating intuitive, effective digital solutions for complex problems, utilizing languages like JavaScript, React, Python, and various back-end technologies. Always excited for the next challenge, I am continuously improving my skills to stay on the cutting edge of technology. Feel free to browse my projects and get in touch!</p>
+                            <a className='resume-link' href="/resume.pdf" download>
+                                <button onClick={() => console.log('connect')}>Download Resumé <ArrowDownCircle size={25} /></button>
+                            </a>
+                        </div>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Headder Img"/>
