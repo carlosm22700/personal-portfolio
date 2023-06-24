@@ -8,7 +8,7 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Full-Stack Developer', 'Software Engineer', 'UI/UX Designer'];
+    const toRotate = ['Full-Stack Developer', 'Data Analys', 'Software Engineer',];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -52,7 +52,7 @@ export const Banner = () => {
                             <div className={isVisible ? "animate__animated animate__fadein" : ""}>
                                 <span className="tagline">Welcome to my Portfolio</span>
                                 <h1>{`Hi I'm Carlos Martinez`} <span className="wrap">{text}</span></h1>
-                                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p> I'm a detail-oriented software engineer with a passion for front-end development and data analysis. I enjoy creating intuitive, effective digital solutions for complex problems, utilizing languages like JavaScript, React, Python, and various back-end technologies. Always excited for the next challenge, I am continuously improving my skills to stay on the cutting edge of technology. Feel free to browse my projects and get in touch!</p>
                                 <a className='resume-link' href="/resume.pdf" download>
                                     <button onClick={() => console.log('connect')}>Download Resumé <ArrowDownCircle size={25} /></button>
                                 </a>

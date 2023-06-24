@@ -36,23 +36,51 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Lorem Ipsum is a randomly generated text used for testing purposes <br></br> Lorem Ipsum can be used as placeholders in websites</p>
+                            <p>With a diverse set of skills leveraging full-stack methodologies, I'm prepared to tackle a wide range of challenges.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt='Image' />
-                                    <h5>Web Development</h5>
-                                </div>
-                                <div className="item">
-                                    <img src={meter2} alt='Image' />
-                                    <h5>Brand Identity</h5>
-                                </div>
-                                <div className="item">
-                                    <img src={meter3} alt='Image' />
-                                    <h5>Logo Design</h5>
+                                    <h5>JavaScript Development</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt='Image' />
-                                    <h5>Web Development</h5>
+                                    <h5>React Development</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter3} alt='Image' />
+                                    <h5>Python Programming</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter1} alt='Image' />
+                                    <h5>Data Analysis</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter2} alt='Image' />
+                                    <h5>API Development & Integration</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter3} alt='Image' />
+                                    <h5>Database Management (SQL/NoSQL)</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter1} alt='Image' />
+                                    <h5>Version Control (Git)</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter2} alt='Image' />
+                                    <h5>Test-Driven Development</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter3} alt='Image' />
+                                    <h5>Agile Methodologies</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter1} alt='Image' />
+                                    <h5>Problem Solving</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter2} alt='Image' />
+                                    <h5>Communication</h5>
                                 </div>
                             </Carousel>
                         </div>
